@@ -1,0 +1,39 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* ici j'ai utilisé le display grid , pour savoir si j'arriverai a 
+avoir les même rendu qu'avec le display flex*/
+.container{
+	height: 100px;
+	width: 100%;
+	display: grid;
+	grid-template-columns:200px 200px;
+	justify-content: center;
+	align-items: center;
+	column-gap: 20px;
+	row-gap: 20px;
+	margin-top: 50px;
+
+}
+.boite{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	 height: 200px;
+	 width: 200px;
+	font-size: 14px;
+	background-color: red;
+	transition: transform 0.5s ease, background-color  0.7s;
+}
+/* ici le style qui permétra la transformation on cas de click,
+avec les propriétés transition => ralentie l'effet du changement 
+et avec la propriété transforme => indique les changement qu'on veux 
+appliquer lors du click.*/
+.boite.active{
+	background-color: aqua;
+	height: 180px; /* 10% de la taille d'origine de la boite*/
+	width: 180px;
+	transform: rotate(360deg);
+}
